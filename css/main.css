@@ -1,16 +1,24 @@
 * {
   box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0;
+  /* margin: 0 auto;
+  padding: 0; */
 }
 
 h1 {
   /* bgc */
   background-color: #111;
   /* c */
-  color: #fff;
+  color: #49d89f;
   /* fz */
   font-size: 48px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
 }
 
 .box {
@@ -46,6 +54,16 @@ h1 {
   top: 0;
 }
 
+.circle {
+  width: 50%;
+  /* height: 50%; */
+  /* padding-bottom: 50%; */
+  aspect-ratio: 1/1;
+  background-color: #fff;
+  /* brs */
+  border-radius: 50%;
+}
+
 .items li {
   /* db */
   display: inline-block;
@@ -53,4 +71,26 @@ h1 {
   display: inline; */
   width: 100px;
   border: 2px solid red;
+}
+
+.fruits {
+  padding-left: 40px;
+  list-style-type: upper-alpha;
+  /* list-style-type: ; */
+}
+
+.fruits li:nth-child(odd) {
+  background-color: orange;
+}
+
+.fruits li:nth-child(even) {
+  background-color: yellow;
+}
+
+.fruits li:nth-child(5n + 3) {
+  background-color: rgb(36, 190, 36);
+}
+
+.lorem-text {
+  text-align: center;
 }
