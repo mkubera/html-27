@@ -21,6 +21,36 @@ h3 {
   font-size: 24px;
 }
 
+a {
+  font-size: 32px;
+  opacity: 0.5;
+}
+
+a:link {
+  color: #000;
+}
+
+a:visited {
+  color: gray;
+}
+
+a:hover {
+  color: blue;
+  opacity: 1;
+}
+
+a:active {
+  color: red;
+}
+
+.username-input {
+  border: 10px solid orange;
+}
+.username-input:focus {
+  border-color: yellow;
+  outline: 0;
+}
+
 .box {
   /* w200 */
   width: 200px;
@@ -52,6 +82,7 @@ h3 {
   left: 0;
   /* t */
   top: 0;
+  z-index: 99;
 }
 
 .circle {
@@ -62,6 +93,31 @@ h3 {
   background-color: #fff;
   /* brs */
   border-radius: 50%;
+  position: absolute;
+  z-index: 100;
+  transition-property: background-color, border-color, left;
+  transition-duration: 1s;
+  border: 3px solid #fff;
+  left: 20px;
+}
+
+.circle:hover {
+  background-color: #444;
+  border-color: rgb(36, 190, 36);
+  left: 50px;
+  /* border-width: 3px;
+  border-style: solid; */
+}
+
+.circle::before {
+  content: "HELLO";
+  color: orange;
+  margin-left: -100px;
+}
+.circle::after {
+  content: "WORLD";
+  color: orange;
+  margin-right: -100px;
 }
 
 .items li {
@@ -93,4 +149,14 @@ h3 {
 
 .lorem-text {
   text-align: center;
+}
+.lorem-text::selection {
+  background-color: orange;
+  color: #fff;
+}
+.lorem-text::first-letter {
+  font-size: 60px;
+}
+.lorem-text::first-line {
+  font-size: 30px;
 }
